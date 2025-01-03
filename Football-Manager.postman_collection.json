@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "cc04433c-1d5f-47f0-b186-c54bde4baddb",
+		"name": "Football-Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29194324"
+	},
+	"item": [
+		{
+			"name": "players",
+			"item": [
+				{
+					"name": "Get all players",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/players",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get player by UUID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/players/1307b476-76dc-48d3-a6d6-409909db732b",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"players",
+								"1307b476-76dc-48d3-a6d6-409909db732b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new player",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Player Name\",\r\n  \"age\": 25,\r\n  \"experienceMonths\": 24\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/players?teamUuid=83a94ac6-3036-4dd7-84d1-118a42001a4a",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"players"
+							],
+							"query": [
+								{
+									"key": "teamUuid",
+									"value": "83a94ac6-3036-4dd7-84d1-118a42001a4a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update player",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Player new name\",\r\n  \"age\": 20,\r\n  \"experienceMonths\": 22\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/players/b8a2dd80-175f-44f3-b208-132ea675b3a9",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"players",
+								"b8a2dd80-175f-44f3-b208-132ea675b3a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete player",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/players/uuid",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"players",
+								"uuid"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teams",
+			"item": [
+				{
+					"name": "Get all teams",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get team by UUID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/teams/uuid",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"teams",
+								"uuid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Team A\",\r\n  \"accountBalance\": 100000.0,\r\n  \"commissionPercentage\": 10.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/teams",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update team",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Team D\",\r\n  \"accountBalance\": 100000.0,\r\n  \"commissionPercentage\": 10.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/teams/cc44cf79-2b7f-4bcf-aecf-9ac52b2b765a",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"teams",
+								"cc44cf79-2b7f-4bcf-aecf-9ac52b2b765a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/teams/cc44cf79-2b7f-4bcf-aecf-9ac52b2b765a",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"teams",
+								"cc44cf79-2b7f-4bcf-aecf-9ac52b2b765a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transfers",
+			"item": [
+				{
+					"name": "Transfer player",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/transfers?playerUuid=1307b476-76dc-48d3-a6d6-409909db732b&toTeamUuid=7150c483-0947-4ed1-96fb-c5d4ed54be10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transfers"
+							],
+							"query": [
+								{
+									"key": "playerUuid",
+									"value": "1307b476-76dc-48d3-a6d6-409909db732b"
+								},
+								{
+									"key": "toTeamUuid",
+									"value": "7150c483-0947-4ed1-96fb-c5d4ed54be10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
